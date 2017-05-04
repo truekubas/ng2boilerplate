@@ -12,6 +12,8 @@ import {DashboardComponent} from './dashboard.component';
 import {HeroService} from './hero.service';
 import {AppRoutingModule} from './app-routing.module';
 import {AuthGuard} from './auth-guard.service';
+import {HeaderComponent} from './header.component';
+import {SharedService} from './shared-service';
 
 @NgModule({
   imports: [
@@ -23,9 +25,10 @@ import {AuthGuard} from './auth-guard.service';
     AppComponent,
     HeroDetailComponent,
     HeroesComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeaderComponent
   ],
-  providers: [ HeroService, AuthGuard ],
+  providers: [ HeroService, AuthGuard, SharedService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
